@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int calculator(int,int,int);
+int main(){
+    int num1,num2;
+    int operator2;
+    cout<<"Enter num1 value: ";
+    cin>>num1;
+    cout<<"Enter num2 value: ";
+    cin>>num2;
+    cout<<"Choose a operator "<<endl<<"1 for Addition"<<endl<<"2 for Subtraction"<<endl<<"3 for Multiplication"
+    <<endl<<"4 for Divition "<<endl;
+    cin>>operator2;
+    int result=calculator(num1,num2,operator2);
+    cout<<"Result = "<<result;
+    return 0;
+}
+int calculator(int num1,int num2,int operator1){
+    int result;  
+    switch(operator1){
+        case 1 :
+            result=num1+num2;
+            break;
+        case 2 :
+            result=num1-num2;
+            break;
+        case 3 :
+            result=num1*num2;
+            break;
+        case 4 :
+            result=num1/num2;
+            break;
+        default:
+        cout<<"Enter valid operator.";
+    }
+    
+    return result;
+}
